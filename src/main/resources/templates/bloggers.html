@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>博主列表</title>
+</head>
+<body>
+<form action="" th:each="blogger : ${bloggers}">
+    用户编号：<input name="id" th:value="${blogger.id}"/><br>
+    用户姓名：<input type="text" name="username" th:value="${blogger.getName()}"/><br>
+    登陆密码：<input type="text" name="pass" th:value="${blogger.getPass()}"/><br>
+</form>
+</body>
+</html>
